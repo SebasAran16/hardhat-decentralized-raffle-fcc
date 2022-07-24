@@ -15,9 +15,9 @@ const { developmentChains } = require("../../helper-hardhat-config");
               //To get addressess too:
               //const accounts = await ethers.getSigners();
               //const accountZero = accounts[0];
-              deployer = (await getNamedAccounts()).deployer; //let deloyer will wait and
+              deployer = (await getNamedAccounts()).deployer; //let deployer will wait and
               //equal the value of deployer from getNamedAccounts
-              await deployments.fixture(["all"]); //Will deploy eveerithing that has the <all> tag
+              await deployments.fixture(["all"]); //Will deploy everithing that has the <all> tag
               //A.K.A Both contracts
               fundMe = await ethers.getContract("FundMe", deployer);
               mockV3Aggregator = await ethers.getContract(

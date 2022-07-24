@@ -2,7 +2,7 @@ const { network } = require("hardhat");
 const {
     developmentChains,
     DECIMALS,
-    INITIAL_ANSWER
+    INITIAL_PRICE
 } = require("../helper-hardhat-config");
 
 module.exports = async ({ getNamedAccouts, deployments }) => {
@@ -15,7 +15,7 @@ module.exports = async ({ getNamedAccouts, deployments }) => {
             contract: "MockV3Aggregator",
             from: deployer,
             log: true,
-            args: [DECIMALS, INITIAL_ANSWER]
+            args: [DECIMALS, INITIAL_PRICE]
         });
         log("Mocks deployed!");
         log("------------------------------------------");
